@@ -41,7 +41,6 @@ $posts = $response->toArray();
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Titre</th>
                     <th scope="col">Description</th>
                     <th scope="col">image</th>
@@ -51,8 +50,7 @@ $posts = $response->toArray();
                 <tbody>
                 <?php foreach ($posts['hydra:member'] as $post) { ?>
                     <tr>
-                        <th scope="row"><?= $post['@id'] ?></th>
-                        <td><?= $post['title'] ?></td>
+                        <th><?= $post['title'] ?></th>
                         <td><?= $post['description'] ?></td>
                         <td><?= $post['image'] ?></td>
                         <td><?= $post['createdAt'] ?></td>
